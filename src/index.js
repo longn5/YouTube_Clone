@@ -1,15 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { Provider } from 'react-redux';
-import { createStore, applyMiddleware } from 'redux';
 
-import App from './components/app';
-import reducers from './reducers';
+const API_KEY = 'AIzaSyD8JJ3Io6mpqcxQQB5qHRoOo69X58dHxPA';
 
-const createStoreWithMiddleware = applyMiddleware()(createStore);
-
-ReactDOM.render(
-  <Provider store={createStoreWithMiddleware(reducers)}>
-    <App />
-  </Provider>
-  , document.querySelector('.container'));
+//create a new component. This component should produce some html
+const App = () => {return <div>YouTube Clone!</div>}
+//Take this component's generated HTML and put it on the page (in the DOM)
+ReactDOM.render(<App/>, document.querySelector('.container'));
